@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogModule } from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -54,17 +55,15 @@ export class HomeComponent implements OnInit {
 
 
         } else{
-          this.clicksSad= 999;
-          this.clicksGood= 999;
-          this.clicksMed= 999;
+          this.clicksSad= 0;
+          this.clicksGood= 0;
+          this.clicksMed= 0;
+          this.votes= 0;
         }
-
     }
 
 
   clearCounter(){
-
-    alert("clear");
 
     localStorage.clear();
     this.clicksSad= 0;
@@ -75,6 +74,32 @@ export class HomeComponent implements OnInit {
 
   loadCounter(){
     this.loadLocal();
+  }
+
+  // visibility settings
+  isShown: boolean = false ; // hidden by default
+
+  toggleShow() {
+
+  /*  prompt({
+        "title": "Show Settings",
+        "message": "Password für Settings",
+        "input": true,
+        "label": "Password",
+        "value": ""
+        }).then(function(result){ console.log(result);
+
+            if (result === "vote"){
+              this.isShown = ! this.isShown;
+            }
+
+        });
+        */
+
+
+      this.isShown = ! this.isShown;
+
 }
+
 
 }

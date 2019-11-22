@@ -1,4 +1,4 @@
-<h1>HAK Mürz</h1>
+<h1 (click)="toggleShow()">HAK Mürz</h1>
 
 Wie hat es euch gefallen beim Tag der offenen Tür?
 
@@ -7,17 +7,17 @@ Wie hat es euch gefallen beim Tag der offenen Tür?
 <ul>
   <li>
     <div   class="smileys_happy" (click)="countClick()"></div>
-      votes: {{ clicksGood }}
+      <div *ngIf="isShown">  votes: {{ clicksGood }}</div>
   </li>
 
   <li>
     <div class="smileys_neutral" (click)="countClick_med()"></div>
-    votes: {{ clicksMed }}
+      <div *ngIf="isShown">votes: {{ clicksMed }}</div>
   </li>
 
   <li>
     <div class="smileys_sad" (click)="countClick_sad()"></div>
-    votes:  {{ clicksSad }}
+    <div *ngIf="isShown">  votes:  {{ clicksSad }}</div>
   </li>
 </ul>
 
@@ -25,11 +25,12 @@ Wie hat es euch gefallen beim Tag der offenen Tür?
 Anzahl der Votes: {{votes}}
 </div>
 
+<!--<button (click)="toggleShow()" type="checkbox" >more/less</button>-->
 
-<div >
-  <p > <span (click)="loadCounter()"> load</span>
-   </p>
-
-   <p > <span (click)="clearCounter()"> clear</span>
+  <div *ngIf="isShown" class="row container-fluid"  id="divshow" >
+    Settings:
+    <p > <span (click)="loadCounter()"> load</span>
     </p>
-</div>
+    <p > <span (click)="clearCounter()"> clear</span>
+    </p>
+  </div>
