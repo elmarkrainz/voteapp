@@ -1,0 +1,94 @@
+span {
+    font-weight: bold;
+    background: lightgray;
+    padding: .3em .8em;
+    cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 10;
+  padding: 10;
+  overflow: hidden;
+
+}
+
+li {
+  float: left;
+  padding: 15px;
+}
+
+.intro {
+  background-color: yellow;
+}
+
+.smileys_happy {
+    width: 90px;
+    height: 90px;
+    border: none;
+    background: url('https://res.cloudinary.com/turdlife/image/upload/v1492864443/happy_ampvnc.svg') center;
+    background-size: cover;
+    
+}
+
+.smileys_neutral {
+    width: 90px;
+    height: 90px;
+    border: none;
+    background: url('https://res.cloudinary.com/turdlife/image/upload/v1492864443/neutral_t3q8hz.svg') center;
+    background-size: cover;
+}
+.smileys_sad {
+    width: 90px;
+    height: 90px;
+    border: none;
+    background: url('https://res.cloudinary.com/turdlife/image/upload/v1492864443/sad_bj1tuj.svg') center;
+    background-size: cover;
+}
+
+
+.play-container {
+    padding: 3em;
+    border: 1px solid lightgray;
+    margin-bottom: 1em;
+
+    input {
+        padding: 1em;
+        margin-bottom: 2em;
+    }
+}
+
+//https://codepen.io/wiseoldman/pen/RVRgyB
+.smileys {
+		-webkit-appearance: none;
+    width: 90px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    transition: border .2s ease;
+    filter: grayscale(100%);
+    margin: 0 5px;
+    transition: all .2s ease;
+
+    &:hover, &:checked {
+      filter:	grayscale(0);
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &.happy {
+      background: url('https://res.cloudinary.com/turdlife/image/upload/v1492864443/happy_ampvnc.svg') center;
+      background-size: cover;
+    }
+
+    &.neutral {
+      background: url('https://res.cloudinary.com/turdlife/image/upload/v1492864443/neutral_t3q8hz.svg') center;
+      background-size: cover;
+    }
+    &.sad {
+      background: url('https://res.cloudinary.com/turdlife/image/upload/v1492864443/sad_bj1tuj.svg') center;
+      background-size: cover;
+    }
+  }
